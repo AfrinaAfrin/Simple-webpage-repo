@@ -3,19 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Debugged Form</title>
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background: linear-gradient(to top, rgb(20, 215, 202), rgb(4, 4, 101));
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: small;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .navbar ul li a:hover {
+            text-decoration: underline;
+        }
+
+    
+        .content {
+            padding: 20px;
+            font-weight: bold;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table th, table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        table th {
+            background: darkblue;
+            color: white;
+        }
+
+        
+        form {
+            margin-top: 20px;
+        }
+
+        form div {
+            margin-bottom: 15px;
+        }
+
+        form label {
+            display: block;
+            font-weight: bold;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background: rgb(255, 255, 255);
+            color: rgb(5, 5, 5);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        form button:hover {
+            background: lightblue;
+            color: black;
+        }
+    </style>
 </head>
 <body>
-    <form action="/submit" method="post">
-        
-        <label for="username">Enter Username:</label>
-        <input type="text" id="username" name="username" required>
 
-        <label for="passcode">Password:</label>
-        <input type="password" id="passcode" name="password" required>
+    
+    <div class="navbar">
+        <h1>My Portfolio</h1>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    
+    <div class="content">
+        
+        <h2 id="home">Welcome to My Portfolio</h2>
+        <p>This portfolio showcases my projects and provides information about my background and contact details.</p>
+
+         
+        <h2 id="about">About</h2>
+        <p>Hello! I'm a web developer passionate about building dynamic and responsive websites. I enjoy creating user-friendly interfaces and working on challenging projects.</p>
+
+         
+        <h2 id="projects">Projects</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Description</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Project Alpha</td>
+                    <td>A web-based tool for tracking project progress and managing tasks.</td>
+                    <td>2023</td>
+                </tr>
+                <tr>
+                    <td>Portfolio Site</td>
+                    <td>A personal website showcasing my work and skills as a web developer.</td>
+                    <td>2024</td>
+                </tr>
+            </tbody>
+        </table>
 
         
-        <button type="submit">Submit Form</button>
-    </form>
+        <h2 id="contact">Contact</h2>
+        <form>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
